@@ -1,0 +1,346 @@
+
+* {
+    margin: 0;
+    padding: 0;
+  
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1B264F;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* 垂直居中頁面 */
+    min-height: 100vh;
+    margin: 0; /* 清除預設的邊距 */
+}
+
+.resume-container {
+    width: 100%;
+    max-width: 100vw;
+    height: 100vh;
+    padding: 20px 40px; /* 調整左右邊距，避免內容緊貼邊緣 */
+    box-shadow: none;
+    overflow-y: auto;
+    background-color: #1B264F; /* 確保背景顏色和整體一致 */
+    box-sizing: border-box; /* 確保 padding 不影響總寬度 */
+}
+
+nav {
+    display: flex;
+    justify-content: space-around; /* 標題之間有均勻的間距 */
+    align-items: center;
+    background-color: #323b4c;
+    color: #ffffff;
+    padding: 15px 0;
+    text-align: center;
+    z-index: 1000;
+}
+
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+h1 {
+    font-size: 24px;
+    color: #e8f1f9;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.section {
+    margin-bottom: 20px;
+}
+.section-title {
+    font-size: 18px;
+    color: #323b4c;
+    border-bottom: 2px solid #323b4c; /* 統一底線 */
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+
+.about-me, .experience, .skills, .contact-info {
+    padding: 15px;
+    background: #e8f1f9;
+    border-radius: 15px;
+    margin-bottom: 15px;
+}
+
+/* 原本的設定 */
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.about-text {
+    flex: 2;
+}
+
+.about-image {
+    flex: 1;
+    text-align: center;
+}
+
+.about-image img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* 響應式設計：手機螢幕 */
+@media (max-width: 768px) {
+    .resume-container {
+        padding: 10px; /* 減小手機版邊距 */
+        width: 100vw; /* 確保在手機上佔滿寬度 */
+    }
+
+    nav {
+        padding: 10px 0;
+    }
+
+    nav a {
+        margin: 5px 0;
+        font-size: 14px; /* 調整字體大小 */
+    }
+
+    h1 {
+        font-size: 20px; /* 縮小標題 */
+    }
+
+    .section {
+        margin-bottom: 15px;
+        padding: 10px;
+    }
+
+    .about-content, .experience-content, .course-content {
+        flex-direction: column; /* 改為垂直排列 */
+        align-items: center;
+        text-align: left;
+    }
+
+    .about-image img, .experience-image img, .course-image img {
+        width: 100px; /* 縮小圖片尺寸 */
+        height: 100px;
+    }
+
+    .section-title {
+        font-size: 16px;
+        text-align: center;
+    }
+
+    .bar-container {
+        width: 90%; /* 讓進度條佔滿寬度 */
+    }
+
+
+    .experience-content {
+        flex-direction: column;
+        align-items: flex-start; /* 將內容靠左對齊 */
+    }
+    
+    .experience-text {
+        text-align: left; /* 文字靠左對齊 */
+        padding-left: 10px; /* 添加左側間距，避免緊貼邊緣 */
+     }
+    
+    .experience-image {
+        text-align: center; /* 圖片保持在容器內水平居中 */
+        margin-top: 10px; /* 與文字區塊保持距離 */
+    }
+}
+    
+
+.quote {
+    color: #555;
+    margin-top: 10px;
+}
+.experience-item {
+    margin-bottom: 10px; /* 減少底部空白 */
+    padding: 5px 0; /* 添加內部間距，確保文字不太緊貼 */
+}
+.experience {
+    padding: 10px 15px; /* 減少內邊距以縮小區塊大小 */
+}
+
+.experience-item h3 {
+    font-size: 16px;
+    color: #323b4c;
+    margin: 0;
+}
+
+.experience-content {
+    display: flex;
+    gap: 20px; /* 文字和圖片之間的間距 */
+    align-items: center; /* 垂直居中對齊 */
+}
+
+.experience-text {
+    flex: 2; /* 文字區域占較多寬度 */
+}
+
+.experience-image {
+    flex: 1; /* 圖片區域占較少寬度 */
+    text-align: center; /* 圖片水平居中 */
+    display: flex;
+    justify-content: center; /* 保證圖片在容器內水平居中 */
+    align-items: center; /* 保證圖片在容器內垂直居中 */
+}
+
+.experience-image img {
+    width: 150px; /* 固定寬度 */
+    height: 150px; /* 固定高度 */
+    object-fit: contain; /* 保持圖片完整顯示 */
+    border-radius: 8px; /* 圓角效果 */
+}
+
+.experience1-image img {
+    width: 100px; /* 固定寬度 */
+    height: 100px; /* 固定高度 */
+    object-fit: contain; /* 保持圖片完整顯示 */
+    border-radius: 8px; /* 圓角效果 */
+}
+
+.course-content {
+    display: flex;
+    gap: 20px; /* 控制文字和圖片之間的距離 */
+    align-items: center; /* 垂直居中對齊 */
+}
+.course-content ul {
+    padding-left: 20px; /* 確保列表有適當縮進 */
+    margin: 0; /* 移除默認外邊距 */
+}
+
+.course-content li {
+    margin-bottom: 7px; /* 減少列表項之間的空白 */
+    line-height: 1.2; /* 調整行高，讓文字間隔更自然 */
+}
+
+.course-text {
+    flex: 2; /* 控制文字區域的寬度比例 */
+    font-size: 14px;
+}
+
+.course-image {
+    flex: 1; /* 控制圖片區域的寬度比例 */
+    text-align: center; /* 圖片水平居中 */
+}
+
+.course-image img {
+    width: 150px; /* 確保圖片不會超過容器的寬度 */
+    height: 150px; /* 保持圖片的比例 */
+    border-radius: 8px; /* 給圖片圓角（可選） */
+}
+
+.skill-category {
+    margin-bottom: 10px;
+}
+.skill-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 每行三個項目 */
+    gap: 20px; /* 每個項目之間的間距 */
+    text-align: center; /* 圖片和文字居中 */
+}
+
+.skill-item {
+    display: flex;
+    flex-direction: column; /* 垂直排列圖片和文字 */
+    align-items: center; /* 圖片和文字垂直居中 */
+}
+
+.skill-icon {
+    width: 160px; /* 增大圖片寬度 */
+    height: 155px; /* 增大圖片高度 */
+    margin-bottom: 10px; /* 圖片與文字之間的間距 */
+}
+
+.bar-container {
+    width: 100%;
+    background-color: #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 5px 0;
+}
+.bar {
+    height: 20px;
+    border-radius: 8px;
+    background-color: #323b4c;
+}
+ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+#clubs ul {
+    padding-left: 20px; /* 同樣確保列表有適當縮進 */
+    margin: 0; /* 移除默認外邊距 */
+}
+
+#clubs li {
+    margin-bottom: 8px; /* 減少列表項之間的空白 */
+    line-height: 1.2; /* 調整行高，讓文字看起來更緊湊 */
+}
+
+.contact-info {
+    padding: 20px 0;
+    background-color: #e8f1f9;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.contact-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* 設定圖標間的距離 */
+    flex-wrap: wrap; /* 支援換行 */
+    margin-top: 20px;
+}
+
+.contact-icons a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: #333;
+    width: 80px; /* 設定每個圖標容器的寬度 */
+    text-align: center;
+}
+
+.contact-icons img {
+    width: 40px; /* 設定圖片大小 */
+    height: 40px;
+    object-fit: contain; /* 保持比例，避免圖片變形 */
+    margin-bottom: 10px; /* 圖標和文字間距 */
+    transition: transform 0.2s ease-in-out;
+}
+
+.contact-icons img:hover {
+    transform: scale(1.2); /* 鼠標懸停時圖片放大 */
+}
+
+.contact-icons p {
+    margin: 0;
+    font-size: 14px;
+}
+
+footer {
+    padding: 30px;
+    text-align: center;
+    background-color: #b0c4de;
+    color: #555;
+    font-size: 14px;
+}
+
